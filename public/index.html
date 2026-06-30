@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmileCare Dental AI Assistant</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="app-wrapper">
+      <!-- ─── Header ─────────────────────────────────────────────────── -->
+      <header class="header">
+        <div class="header-inner">
+          <div class="logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2C8 2 5 5 5 8c0 2 .8 3.8 2 5l1 8h8l1-8c1.2-1.2 2-3 2-5 0-3-3-6-7-6z"/>
+              </svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-title">SmileCare Dental</span>
+              <span class="logo-subtitle">AI Assistant</span>
+            </div>
+          </div>
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Online</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- ─── Chat Container ──────────────────────────────────────────── -->
+      <main class="chat-container">
+        <div class="chat-window" id="chatWindow" role="log" aria-live="polite" aria-label="Chat messages">
+          <!-- Welcome message injected via JS -->
+        </div>
+
+        <!-- ─── Typing Indicator ─────────────────────────────────────── -->
+        <div class="typing-indicator" id="typingIndicator" aria-hidden="true">
+          <div class="typing-bubble">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="typing-text">SmileCare AI is typing…</span>
+        </div>
+
+        <!-- ─── Input Area ────────────────────────────────────────────── -->
+        <div class="input-area">
+          <div class="input-wrapper">
+            <textarea
+              id="messageInput"
+              class="message-input"
+              placeholder="Ask about services, timings, or book an appointment…"
+              rows="1"
+              maxlength="500"
+              aria-label="Type your message"
+            ></textarea>
+            <button
+              id="sendButton"
+              class="send-button"
+              aria-label="Send message"
+              title="Send"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </div>
+          <p class="input-hint">Press <kbd>Enter</kbd> to send &nbsp;|&nbsp; <kbd>Shift+Enter</kbd> for new line</p>
+        </div>
+      </main>
+
+      <!-- ─── Footer ───────────────────────────────────────────────────── -->
+      <footer class="footer">
+        <span>📞 9876543210</span>
+        <span class="divider">|</span>
+        <span>✉️ support@smilecare.com</span>
+        <span class="divider">|</span>
+        <span>🕐 Mon–Fri &nbsp; 10 AM – 7 PM</span>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
